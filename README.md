@@ -1,6 +1,6 @@
 # Folder_and_file_Finder
 
-The program allows a dictionary containing a list of words to be tested in a loop on a given URL.
+The script allows a dictionary containing a list of words to be tested in a loop on a given URL.
 
 #How it works
 
