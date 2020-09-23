@@ -79,3 +79,5 @@ try
             print("\n[!] Error script init ! Please check the manual with options -h or --help")
 except requests.exceptions.SSLError:
      print("\n[!] Error with the SSL Certificate, It's appears doesn't match with the given domain...")
+except requests.exceptions.ConnectionError:
+     print("\n[!] Connection Error : The URL it's invalid... check the '/' in your URL")
