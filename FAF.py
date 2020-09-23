@@ -44,10 +44,11 @@ def helpuser():
     print("\t\t PROTOCOL    :\t\t\t\thttp://")
     print("\t\t             :\t\t\t\thttps://")
     print("\nOPTIONS:")
+    print("\t\t -u --url    :\t\t\t\tFor testing URL ")
     print("\t\t -h --help   :\t\t\t\tThis Screen ")
     print("\t\t -sc [CODE]  :\t\t\t\tSee only the code specified")
     print("\t\t -w [FILES]  :\t\t\t\tSpecified your Wordlist (This option is required)\n")
-    print("[?] Example: python ./script.py http://www.domain.com/ [OPTIONS] -w wordlist.txt")
+    print("[?] Example: python ./script.py -u http://www.domain.com/ [OPTIONS] -w wordlist.txt")
 
 if __name__ == "__main__":
     if(arg):
