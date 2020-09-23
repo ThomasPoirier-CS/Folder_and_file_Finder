@@ -52,8 +52,8 @@ def initial():
                     if s == "403" or not s:
                         print("[!] Forbidden Access: ("+(word)+") | CODE:"+(cde))                        
         elif req == 404:
-            cde = str(cde)
-            print("[!] Error Web client, please check your URL | CODE:"+(cde))
+            req = str(req)
+            print("[!] Error Web client, please check your URL | CODE:"+(req))
 
 # Fonction pour guider les utilisateurs
 def helpuser():
