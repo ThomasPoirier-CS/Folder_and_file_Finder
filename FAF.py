@@ -37,19 +37,19 @@ def initial():
                 cde = requests.post(cmd).status_code
                 if cde == 200:
                     cde = str(cde)
-                    if s == "200":
+                    if s == "200" or not s:
                         print("[*] Match Found: ("+(word)+") | CODE:"+(cde))
                 elif cde == 401:
                     cde = str(cde)
-                    if s == "401":
+                    if s == "401" or not s:
                         print("[?] Match Found with Auth Basic: ("+(word)+") | CODE:"+(cde))
                 elif cde == 404:
                     cde = str(cde)
-                    if s == "404":
+                    if s == "404" or not s:
                         print("[!] No match: ("+(word)+") | CODE:"+(cde))
                 elif cde == 403:
                     cde = str(cde)
-                    if s == "403":
+                    if s == "403" or not s:
                         print("[!] Forbidden Access: ("+(word)+") | CODE:"+(cde))                        
         elif req == 404:
             cde = str(cde)
@@ -74,5 +74,5 @@ if __name__ == "__main__":
         initial()
     if(helps):
         helpuser()
-    else:
+    if not(arg):
         print("\n[!] Error script init ! Please check the manual with options -h or --help")
