@@ -69,10 +69,13 @@ def helpuser():
     print("[?] Example: python ./script.py -u http://www.domain.com/ [OPTIONS] -w wordlist.txt")
 
 # Debut du code
-if __name__ == "__main__":
-    if(arg):
-        initial()
-    if(helps):
-        helpuser()
-    if not(arg):
-        print("\n[!] Error script init ! Please check the manual with options -h or --help")
+try
+    if __name__ == "__main__":
+        if(arg):
+            initial()
+        if(helps):
+            helpuser()
+        if not(arg):
+            print("\n[!] Error script init ! Please check the manual with options -h or --help")
+except requests.exceptions.SSLError:
+     print("\n[!] Error with the SSL Certificate, It's appears doesn't match with the given domain...")
