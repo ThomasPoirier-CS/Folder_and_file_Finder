@@ -47,6 +47,10 @@ def initial():
                     cde = str(cde)
                     if s == "404":
                         print("[!] No match: ("+(word)+") | CODE:"+(cde))
+                elif cde == 403:
+                    cde = str(cde)
+                    if s == "403":
+                        print("[!] Forbidden Access: ("+(word)+") | CODE:"+(cde))                        
         elif req == 404:
             cde = str(cde)
             print("[!] Error Web client, please check your URL | CODE:"+(cde))
@@ -58,8 +62,9 @@ def helpuser():
     print("\t\t PROTOCOL    :\t\t\t\thttp://")
     print("\t\t             :\t\t\t\thttps://")
     print("\nOPTIONS:")
+    print("\t\t -u --url   :\t\t\t\tFor testing URL ")
     print("\t\t -h --help   :\t\t\t\tThis Screen ")
-    print("\t\t -sc [CODE]  :\t\t\t\tSee only the code specified")
+    print("\t\t -s [CODE]  :\t\t\t\tSee only the code specified")
     print("\t\t -w [FILES]  :\t\t\t\tSpecified your Wordlist (This option is required)\n")
     print("[?] Example: python ./script.py -u http://www.domain.com/ [OPTIONS] -w wordlist.txt")
 
