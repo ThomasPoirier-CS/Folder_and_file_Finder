@@ -25,9 +25,9 @@ def initial():
     if(arg):
         req = requests.get(arg).status_code # On recupere le code HTTP dans une variable
         if req == 200:
-            print("[!] Testing your URL, Please wait...")
-            time.sleep(2)
-            print("\n[OK] Test successful !\n")
+            print("\n[!] Testing your URL, Please wait...")
+            time.sleep(1)
+            print("[OK] Test successful !\n")
             time.sleep(1)
             print("[!] Script is running, Press CTRL + C to stop\n")
             liste = open(wordlist, "r").readlines()
@@ -83,3 +83,6 @@ except requests.exceptions.SSLError:
 # On releve les erreurs en lien avec la mauvaise formulation de lURL        
 except requests.exceptions.ConnectionError:
      print("\n[!] Connection Error : The URL it's invalid... check the '/' in your URL")
+# On releve lexeption quand lutilisateur souhaite arreter le script
+except KeyboardInterrupt:
+    print("\nThe script was interrupted, quitting...")
