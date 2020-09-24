@@ -2,7 +2,7 @@
 
 The script allows a dictionary containing a list of words to be tested in a loop on a given URL.
 
-#How it works
+# How it works
 
 In a terminal just enter the command: python FaF.py --url https://example.com --wordlist your_dictionary.txt
 
